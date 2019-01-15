@@ -12,7 +12,7 @@ def hello():
 
 @app.route('/')
 def index():
-    return render_template('index.html', titre="LeTitre", mots=["test1","test2","test3"])
+    return render_template('index.html', titre="LeTitre", mots=["test1","test2","test3","test4"])
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
