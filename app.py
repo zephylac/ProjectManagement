@@ -13,7 +13,7 @@ def hello():
 
 @app.route('/')
 def index():
-	    return render_template('./index.html', titre="LeTitre", mots=["test1","test2","test3","Try your math: <a href="https://api.quantumfruit.xyz/math/easy.html">Easy</a> or <a href="https://api.quantumfruit.xyz/math/medim.html">Medium</a> or <a href="https://api.quantumfruit.xyz/math/hard.html">Hard</a>"])
+	    return render_template('./index.html', titre="LeTitre", mots=["test1","test2","test3"])
 
 @app.route('/math/easy')
 math_custom.easy()
