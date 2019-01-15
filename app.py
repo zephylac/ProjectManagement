@@ -13,7 +13,9 @@ def hello():
 
 @app.route('/')
 def index():
-	    return render_template('./index.html', titre="LeTitre", mots=["test1","test2","test3"])
+    question = select_word_question(1)
+    return render_template('index.html', titre="LeTitre", mots=["test1","test2","test3","test4"], question1=question.question
+    ,reponses=question.propositions)
 
 @app.route('/math/easy')
 def index2():
