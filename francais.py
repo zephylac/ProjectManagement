@@ -23,9 +23,7 @@ def select_word_question(difficulty):
     question1 = Question(1,"je ... une pomme","mange",["mange","bois"])
     question2 = Question(2,"je ... en cours","vais",["vais","vait","va"])
     questions = [question1,question2]
-    for quest in questions:
-        if quest.difficulty() == difficulty:
-            return quest
+    return question1
 
 def go():
     return select_word_question(1).question
