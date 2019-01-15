@@ -3,6 +3,15 @@
     <head>
         <meta charset="utf-8" />
         <title>francais</title>
+        <script>
+            function func()
+            {
+                var str = document.getElementById("reponse").value;
+                var statut = document.getElementById("statut");
+                if(str == {{answer}}) statut.innerHTML = "Correct";
+                else statut.innerHTLM = "Incorrect";
+            }
+        </script>
     </head>
 
     <body>
@@ -13,6 +22,8 @@
             <li>{{ r }}</li>
         {% endfor %}
         
-        <input type="text" size="10" id="reponse">  
+        <input type="text" size="10" id="reponse"> 
+        <input type="button" value="test" onclick="func()">
+        <span id="statut"></span>
     </body>
 </html>
