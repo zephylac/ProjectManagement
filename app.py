@@ -54,6 +54,10 @@ def math_hard():
     var1, var2, var3 = math_custom.hard()
     return render_template('hard.html',var1=var1,var2=var2,var3=var3)
 
+@app.route('/serious-game')
+def seriousGame():
+    return render_template('serious.html')
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
