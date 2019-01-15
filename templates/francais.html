@@ -8,6 +8,10 @@
             {
                 var str = document.getElementById("reponse").value;
                 var statut = document.getElementById("statut");
+                console.log(str);
+                console.log(typeof str);
+                console.log({{answer}});
+                console.log(typeof {{answer}});
                 if(str.valueOf() == {{answer}}) statut.innerHTML = "Correct";
                 else statut.innerHTML = "Incorrect";
             }
