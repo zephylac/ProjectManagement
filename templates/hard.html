@@ -10,6 +10,8 @@
             var status = document.getElementById("status");
             if(str == {{var3}}) status.innerHTML = "Correct";
             else status.innerHTML = "Incorrect";
+            if(str == {{var3}}) {{ score }} = {{ score }} + 1;
+            else {{ score }} = {{ score }} - 1;
             }
         </script>
     </head>

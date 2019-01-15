@@ -18,7 +18,7 @@ def hello():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', score=score, name=sessionName)
 
 @app.route('/exo/literraire')
 def literraire():
@@ -46,17 +46,17 @@ def math():
 @app.route('/exo/math/easy')
 def math_easy():
     var1, var2, var3 = math_custom.easy()
-    return render_template('easy.html',var1=var1,var2=var2,var3=var3)
+    return render_template('easy.html',var1=var1,var2=var2,var3=var3,score=score)
 
 @app.route('/exo/math/medium')
 def math_medium():
     var1, var2, var3 = math_custom.medium()
-    return render_template('medium.html',var1=var1,var2=var2,var3=var3)
+    return render_template('medium.html',var1=var1,var2=var2,var3=var3,score=score)
 
 @app.route('/exo/math/hard')
 def math_hard():
     var1, var2, var3 = math_custom.hard()
-    return render_template('hard.html',var1=var1,var2=var2,var3=var3)
+    return render_template('hard.html',var1=var1,var2=var2,var3=var3,score=score)
 
 @app.route('/serious-game')
 def seriousGame():
