@@ -20,9 +20,24 @@ def index():
 def literraire():
     return render_template('francais.html')
 
-@app.route('/exo/math')
+@app.route('/exo/math/')
 def index2():
     return render_template('math.html')
+
+@app.route('/exo/math/easy')
+def index2():
+    var1, var2, var3 = math_custom.easy()
+    return render_template('easy.html',var1=var1,var2=var2,var3=var3)
+
+@app.route('/exo/math/medium')
+def index2():
+    var1, var2, var3 = math_custom.medium()
+    return render_template('medium.html',var1=var1,var2=var2,var3=var3)
+
+@app.route('/exo/math/hard')
+def index2():
+    var1, var2, var3 = math_custom.hard()
+    return render_template('hard.html',var1=var1,var2=var2,var3=var3)
 
 
 if __name__ == "__main__":
