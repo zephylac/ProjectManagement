@@ -1,11 +1,14 @@
 from flask import Flask
 from redis import Redis
 from flask import render_template
+from flask import session
 import math_custom
 import francais
 
 app = Flask(__name__)
 redis = Redis(host='flask-redis', port=6379)
+sessionName=""
+score=0
 
 @app.route('/hello')
 def hello():
@@ -58,6 +61,10 @@ def math_hard():
 def seriousGame():
     return render_template('serious.html')
 
+@app.route('/authorisation')
+def authorise():
+    session['authenticated']=True
+    return render_template('auth.html',name=sessionName)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
