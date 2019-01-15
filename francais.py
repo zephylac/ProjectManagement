@@ -1,3 +1,7 @@
+from flask import Flask
+from redis import Redis
+from flask import render_template
+
 class Question:
     def __init__(self, difficulty, question, answer, propositions):
         self.difficulty=difficulty
