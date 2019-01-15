@@ -2,6 +2,7 @@ from flask import Flask
 from redis import Redis
 from flask import render_template
 import math_custom
+import francais
 
 app = Flask(__name__)
 redis = Redis(host='flask-redis', port=6379)
@@ -17,6 +18,9 @@ def index():
     return render_template('index.html', titre="LeTitre", mots=["test1","test2","test3","test4"], question1=question.question
     ,reponses=question.propositions)
 
+@app.route('exo/literraire')
+def literraire():
+    francais.go()
 @app.route('/math/easy')
 def index2():
     math_custom.easy()
