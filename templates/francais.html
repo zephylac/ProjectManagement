@@ -7,7 +7,11 @@
 
     <body>
         <h1>francais</h1>
+        {% for r in reponses %}
+            <li>{{ mot }}</li>
+        {% endfor %}
         <h1>{{ question }}</h1>
+        
         <input type="text" size="10" id="reponse">  
     </body>
 </html>
