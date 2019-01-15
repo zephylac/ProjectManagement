@@ -36,5 +36,5 @@ def go():
     question = q.question
     answer = q.answer
     propositions = q.propositions
-    return render_template('question.html', titre="LeTitre", question1=question,reponses=propositions)
+    return(question,reponse)
 
