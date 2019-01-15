@@ -2,24 +2,21 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>{{ titre }}</title>
+        <title>Acceuil</title>
     </head>
 
     <body>
-        <h1>{{ titre }}</h1>
+        <h1>Acceuil</h1>
+        <h2>Aide à domicile</h2>
+        <h2>Littéraires</h2>
         <ul>
-        {% for mot in mots %}
-            <li>{{ mot }}</li>
-        {% endfor %}
+            <li><a href="francais">francais</a></li>
         </ul>
-        <h1>{{ question1 }}</h1>
+        <h2>Mathématiques</h2>
         <ul>
-        {% for rep in reponses %}
-            <li>{{ rep }}</li>
-        {% endfor %}
+            <li><a href="easy">facile</a></li>
+            <li><a href="medium">moyen</a></li>
+            <li><a href="hard">difficile</a></li>      
         </ul>
-        <a href="./easy.html">easy</a>
-        <a href="./medium.html">medium</a>
-        <a href="./hard.html">hard</a>    
     </body>
 </html>

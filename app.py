@@ -14,9 +14,9 @@ def hello():
 
 @app.route('/')
 def index():
-    return render_template('index.html', titre="LeTitre", mots=["test1","test2","test3","test4"])
+    return render_template('index.html')
 
-@app.route('/exo/literraire')
+""" @app.route('/exo/literraire')
 def literraire():
     francais.go()
 
@@ -30,7 +30,7 @@ def index3():
 
 @app.route('/math/hard')
 def index4():
-    math_custom.hard()
+    math_custom.hard() """
 
 
 if __name__ == "__main__":
