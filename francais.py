@@ -1,4 +1,4 @@
-class question:
+class Question:
     def __init__(self, difficulty, question, answer, propositions):
         self.difficulty=difficulty
         self.question = question
