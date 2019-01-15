@@ -56,3 +56,6 @@ def select_word_question(difficulty):
     for quest in questions:
         if quest.difficulty() == difficulty:
             return quest
+
+def go():
+    return select_word_question(1).question()
