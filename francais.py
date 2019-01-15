@@ -1,7 +1,3 @@
-from flask import Flask
-from redis import Redis
-from flask import render_template
-
 class Question:
     def __init__(self, difficulty, question, answer, propositions):
         self.difficulty=difficulty
@@ -21,20 +17,24 @@ class Question:
     def propositions():
         return self.propositions
 
-
-
 def select_word_question(difficulty):
     question1 = Question(1,"je ... une pomme","mange",["mange","bois"])
     question2 = Question(2,"je ... en cours","vais",["vais","vait","va"])
+    question3 = Question(3,"cette question est ...","difficile",["facile","normale","difficile"])
     questions = [question1,question2]
     for quest in questions:
         if quest.difficulty == difficulty:
     		return quest
 
-def go():
+def qfacile():
+    q = select_word_question(1)
+    return(q.question,q.answer)
+
+def qmoyen():
     q = select_word_question(2)
-    question = q.question
-    answer = q.answer
-    propositions = q.propositions
-    return(question,reponse)
+    return(q.question,q.answer)
+
+def qdiff():
+    q = select_word_question(3)
+    return(q.question,q.answer)
 

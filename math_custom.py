@@ -1,15 +1,15 @@
 import random as rnd
 
-var1, var2 = rnd.randrange(100), rnd.randrange(100)
-
 def easy():
-	return render_template('easy.html', titre="Mathematical examples EASY", task="", solution="solution")
+	var1, var2 = rnd.randrange(100), rnd.randrange(100)
+	return(var1,var2,var1+var2)
 
 def medium():
-	return render_template('medium.html', titre="Mathematical examples MEDIUM", task=""++var1++"-"++var2, solution="solution")
+	var1, var2 = rnd.randrange(100), rnd.randrange(100)
+	return(var1,var2,var1-var2)
 
+	
 def hard():
-	return render_template('hard.html', titre="Mathematical examples HARD", task=""++var1++"*"++var2, solution="solution")
-
-def go():
-	return render_template('easy.html', titre="Mathematical examples EASY", task=""++var1++"+"++var2, solution="solution")
+	var1, var2 = rnd.randrange(100), rnd.randrange(100)
+	return(var1,var2,var1*var2)
+	
