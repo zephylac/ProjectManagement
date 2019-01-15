@@ -8,7 +8,7 @@
             {
                 var str = document.getElementById("reponse").value;
                 var statut = document.getElementById("statut");
-                if(str == {{answer}}) statut.innerHTML = "Correct";
+                if(str.valueOf() == {{answer}}) statut.innerHTML = "Correct";
                 else statut.innerHTML = "Incorrect";
             }
         </script>
