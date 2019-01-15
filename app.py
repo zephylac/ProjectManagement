@@ -23,17 +23,17 @@ def literraire():
 @app.route('/exo/litteraire/easy')
 def litteraire_easy():
     var1, var2, var3 = francais.qfacile()
-    return render_template('easy.html',question=var1,reponses=var3)
+    return render_template('francais.html',question=var1,reponses=var3)
 
 @app.route('/exo/litteraire/medium')
 def litteraire_medium():
     var1, var2, var3 = francais.qmoyen()
-    return render_template('medium.html',question=var1,reponses=var3)
+    return render_template('francais.html',question=var1,reponses=var3)
 
 @app.route('/exo/litteraire/hard')
 def litteraire_hard():
     var1, var2, var3 = francais.qdiff()
-    return render_template('hard.html',question=var1,reponses=var3)
+    return render_template('francais.html',question=var1,reponses=var3)
 
 @app.route('/exo/math/')
 def math():
