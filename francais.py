@@ -23,7 +23,14 @@ def select_word_question(difficulty):
     question1 = Question(1,"je ... une pomme","mange",["mange","bois"])
     question2 = Question(2,"je ... en cours","vais",["vais","vait","va"])
     questions = [question1,question2]
-    return question1
+    for quest in questions:
+        if quest.difficulty == difficulty:
+    		return quest
 
 def go():
-    return select_word_question(1).question()
+    q = select_word_question(2)
+    question = q.question
+    answer = q.answer
+    propositions = q.propositions
+    return render_template('question.html', titre="LeTitre", question1=question,reponses=propositions)
+
