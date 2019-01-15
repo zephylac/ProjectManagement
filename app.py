@@ -12,7 +12,11 @@ def hello():
 
 @app.route('/')
 def index():
-    return render_template('./index.html', titre="LeTitre", mots=["test1","test2","test3","test4"])
+    return render_template('./index.html', titre="LeTitre", mots=["test1","test2","test3","math"])
+
+@app.route('/math')
+def math():
+	return render_template('./math.html', titre="Mathematical examples", task="task", solution="solution")
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
