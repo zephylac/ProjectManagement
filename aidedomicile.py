@@ -22,7 +22,7 @@ class Question:
 
 
 def select_aide_question():
-    question1 = Question(1,"la personne dont je m'occupe fait un malaise, que dois-je faire ?","dormir",["l'aider","dormir","lui crier dessus"])
+    question1 = Question(1,"la personne dont je m'occupe fait un malaise, que dois-je faire ?","dormir",["l'aider","dormir","crier"])
 
     return question1
     
