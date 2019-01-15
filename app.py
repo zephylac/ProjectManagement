@@ -1,12 +1,13 @@
 from flask import Flask
 from redis import Redis
 from flask import render_template
-from flask import session
+from flask import session, redirect, url_for, escape, request
 import math_custom
 import francais
 
 app = Flask(__name__)
 redis = Redis(host='flask-redis', port=6379)
+app.secret_key="random_secret"
 sessionName=""
 score=0
 
