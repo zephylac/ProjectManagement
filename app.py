@@ -20,6 +20,21 @@ def index():
 def literraire():
     return render_template('francais.html')
 
+@app.route('/exo/litteraire/easy')
+def litteraire_easy():
+    var1, var2, var3, var4, var5, var6 = francais.qfacile()
+    return render_template('easy.html',var1=var1,var2=var2,var3=var3,var4=var4,var5=var5,var6=var6)
+
+@app.route('/exo/litteraire/medium')
+def litteraire_medium():
+    var1, var2, var3, var4, var5, var6 = francais.qmoyen()
+    return render_template('medium.html',var1=var1,var2=var2,var3=var3,var4=var4,var5=var5,var6=var6)
+
+@app.route('/exo/litteraire/hard')
+def litteraire_hard():
+    var1, var2, var3, var4, var5, var6 = francais.qdiff()
+    return render_template('hard.html',var1=var1,var2=var2,var3=var3,var4=var4,var5=var5,var6=var6)
+
 @app.route('/exo/math/')
 def math():
     return render_template('math.html')
