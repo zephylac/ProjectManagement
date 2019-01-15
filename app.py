@@ -14,13 +14,12 @@ def hello():
 
 @app.route('/')
 def index():
-    question = select_word_question(1)
-    return render_template('index.html', titre="LeTitre", mots=["test1","test2","test3","test4"], question1=question.question
-    ,reponses=question.propositions)
+    return render_template('index.html', titre="LeTitre", mots=["test1","test2","test3","test4"])
 
-@app.route('exo/literraire')
+@app.route('/exo/literraire')
 def literraire():
     francais.go()
+
 @app.route('/math/easy')
 def index2():
     math_custom.easy()
