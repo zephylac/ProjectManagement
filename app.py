@@ -16,13 +16,16 @@ def index():
 	    return render_template('./index.html', titre="LeTitre", mots=["test1","test2","test3"])
 
 @app.route('/math/easy')
-math_custom.easy()
+def index2():
+    math_custom.easy()
 
 @app.route('/math/medium')
-math_custom.medium()
+def index3():
+    math_custom.medium()
 
 @app.route('/math/hard')
-math_custom.hard()
+def index4():
+    math_custom.hard()
 
 
 if __name__ == "__main__":
