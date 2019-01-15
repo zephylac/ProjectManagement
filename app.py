@@ -18,7 +18,7 @@ def hello():
 
 @app.route('/')
 def index():
-    return render_template('index.html', score=score, name=sessionName)
+    return render_template('index.html', score=score, name=session['username'])
 
 @app.route('/exo/literraire')
 def literraire():
@@ -65,7 +65,7 @@ def seriousGame():
 @app.route('/authorisation')
 def authorise():
     session['authenticated']=True
-    return render_template('auth.html',name=sessionName)
+    return render_template('auth.html',name=session['username'])
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
