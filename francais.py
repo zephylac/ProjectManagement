@@ -28,13 +28,13 @@ def select_word_question(difficulty):
 
 def qfacile():
     q = select_word_question(1)
-    return(q.question,q.answer)
+    return(q.question,q.answer,q.propositions)
 
 def qmoyen():
     q = select_word_question(2)
-    return(q.question,q.answer)
+    return(q.question,q.answer,q.propositions)
 
 def qdiff():
     q = select_word_question(3)
-    return(q.question,q.answer)
+    return(q.question,q.answer,q.propositions)
 
