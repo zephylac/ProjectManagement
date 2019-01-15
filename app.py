@@ -8,7 +8,7 @@ import francais
 app = Flask(__name__)
 redis = Redis(host='flask-redis', port=6379)
 app.secret_key="random_secret"
-sessionName=""
+user=""
 score=0
 
 @app.route('/hello')
@@ -62,10 +62,11 @@ def math_hard():
 def seriousGame():
     return render_template('serious.html')
 
-@app.route('/authorisation')
+@app.route('/authorisation', methods=['POST'])
 def authorise():
+    user=request.form['username']
     session['authenticated']=True
-    return render_template('auth.html',name=session['username'])
+    return render_template('auth.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
