@@ -16,21 +16,13 @@ def hello():
 def index():
     return render_template('index.html')
 
-""" @app.route('/exo/literraire')
+@app.route('/exo/literraire')
 def literraire():
-    francais.go()
+    return render_template('francais.html')
 
-@app.route('/math/easy')
+@app.route('/exo/math')
 def index2():
-    math_custom.easy()
-
-@app.route('/math/medium')
-def index3():
-    math_custom.medium()
-
-@app.route('/math/hard')
-def index4():
-    math_custom.hard() """
+    return render_template('math.html')
 
 
 if __name__ == "__main__":
